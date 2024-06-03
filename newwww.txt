@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Detector App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-page" class="page active">
+            <h1>Login</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="quiz-page" class="page">
+            <h1>Mental Health Quiz</h1>
+            <form id="quiz-form">
+                <p>1. How often do you feel anxious or worried?</p>
+                <select id="q1">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                </select>
+                <p>2. How often do you feel depressed or hopeless?</p>
+                <select id="q2">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                </select>
+                <p>3. How often do you have trouble sleeping?</p>
+                <select id="q3">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                </select>
+                <button type="button" onclick="submitQuiz()">Submit</button>
+            </form>
+        </div>
+        <div id="result-page" class="page">
+            <h1>Results</h1>
+            <p id="result-text"></p>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
